@@ -21,7 +21,7 @@ export class HelloWorld extends LitElement {
   constructor() {
     super();
     this.title = 'Hey there';
-    this.counter = 5;
+    this.counter = 3;
   }
 
   __increment() {
