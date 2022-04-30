@@ -35,7 +35,7 @@ export class HelloWorld extends LitElement {
   // renders planet field on click
   render() {
     return html`
-      <span onclick=${this.toggleAttribute()}>${this.greeting}<span class="planet"> ${this.planet} </span></span>
+      <span onclick=this.toggleAttribute()>${this.greeting}<span class="planet">${this.planet}</span></span>
     `;
   }
 
