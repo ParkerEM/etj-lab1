@@ -1,6 +1,9 @@
 import { LitElement, html, css } from 'lit';
 
 export class HelloWorld extends LitElement {
+  static get tag() {
+    return 'hello-world';
+  }
   static get properties() {
     return {
       greeting: {},
@@ -32,10 +35,7 @@ export class HelloWorld extends LitElement {
   // renders planet field on click
   render() {
     return html`
-      <span onclick=${this.toggleAttribute()}
-        >${this.greeting}
-        <span class="planet"> ${this.planet} </span>
-      </span>
+      <span onclick=${this.toggleAttribute()}>${this.greeting}<span class="planet"> ${this.planet} </span></span>
     `;
   }
 
@@ -45,4 +45,4 @@ export class HelloWorld extends LitElement {
   }
 }
 
-customElements.define('my-element', HelloWorld);
+customElements.define(HelloWorld.tag, HelloWorld);
